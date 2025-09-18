@@ -8,8 +8,8 @@
     <style>
         .done{
             text-decoration: 
-            
         }
+            
         </style>
 </head>
 <body>
@@ -23,7 +23,7 @@
 
     <ul id="TaskList" > your task goes here ...</ul>
 
-
+    
 
     <script>
            function addTask(){
@@ -37,7 +37,7 @@
            }
 
         }
-        
+    
         function getTaskText(){
           
             const input = document.getElementById('taskInput');
@@ -117,15 +117,20 @@
                     done.textContent = "Done";
                     doneBtn.onclick = () =>{
                         const li= taskSpan,parentElement;
+                        console.log(li);
+
 
                         taskSpan.classList.add("done");
+
+                        const button = li.querySelecttorall("button");
+                        button.forEach(btn => btn.remove());
+
                         console.log("task cpmpleted", taskSpan.textContent, Date());
 
                     }
                     return doneBtn;
-                }            
-
-
+                }  
+                
     </script>
     
 </body>
